@@ -4,25 +4,19 @@ namespace SalesManager.Availability.Core.ValueObjects
 {
     public struct Reservation : IEquatable<Reservation>
     {
-        public DateTime ReservationDateTime { get; }
-        public int ReservationPriority { get; }
+        public DateTime DateTime { get; }
+        public int Priority { get; }
 
-        public Reservation(DateTime reservationDateTime, int reservationPriority)
-        {
-            ReservationDateTime = reservationDateTime;
-            ReservationPriority = reservationPriority;
-        }
+        public Reservation(DateTime dateTime, int priority)
+            => (DateTime, Priority) = (dateTime, priority);
 
-        public bool Equals(Reservation other)
-        {
-            return ReservationDateTime.Equals(other.ReservationDateTime) && ReservationPriority == other.ReservationPriority;
-        }
+        public bool Equals(Reservation reservation)
+            => Priority.Equals(reservation.Priority) && DateTime.Date.Equals(reservation.DateTime.Date);
 
         public override bool Equals(object obj)
-        {
-            return obj is Reservation other && Equals(obj);
-        }
+            => obj is Reservation reservation && Equals(reservation);
 
-
+        public override int GetHashCode()
+            => DateTime.Date.GetHashCode();
     }
 }
