@@ -5,7 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Convey" Version="0.5.518" />
+    <PackageReference Include="Convey.Logging" Version="0.5.518" />
+    <PackageReference Include="Convey.WebApi" Version="0.5.518" />
+    <PackageReference Include="Convey.WebApi.CQRS" Version="0.5.518" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SalesManager.Availability.Application\SalesManager.Availability.Application.csproj" />
+    <ProjectReference Include="..\SalesManager.Availability.Core\SalesManager.Availability.Core.csproj" />
+    <ProjectReference Include="..\SalesManager.Availability.Infrastructure\SalesManager.Availability.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
-﻿namespace SalesManager.Availability.Core.Exceptions
+namespace SalesManager.Availability.Core.Exceptions
 {
     public class MissingResourceTagsException : DomainException
     {
-        public MissingResourceTagsException() : base($"Missing tags for the resource.")
+        public override string Code { get; } = "missing_resource_tags";
+        
+        public MissingResourceTagsException() : base("Resource tags are missing.")
         {
         }
     }

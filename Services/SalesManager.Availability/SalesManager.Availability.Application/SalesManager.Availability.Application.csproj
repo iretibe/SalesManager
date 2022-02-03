@@ -4,4 +4,19 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Extensions.cs~RF1310c0a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Convey.CQRS.Commands" Version="0.5.518" />
+    <PackageReference Include="Convey.CQRS.Events" Version="0.5.518" />
+    <PackageReference Include="Convey.CQRS.Queries" Version="0.5.518" />
+    <PackageReference Include="Convey.MessageBrokers" Version="0.5.518" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SalesManager.Availability.Core\SalesManager.Availability.Core.csproj" />
+  </ItemGroup>
+
 </Project>

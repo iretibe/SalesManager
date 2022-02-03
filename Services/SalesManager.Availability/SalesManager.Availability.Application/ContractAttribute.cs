@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 
 namespace SalesManager.Availability.Application
 {
-    public class Class1
+    public class ContractAttribute : Attribute
     {
     }
 }

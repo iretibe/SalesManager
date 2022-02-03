@@ -4,4 +4,17 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Convey" Version="0.5.518" />
+    <PackageReference Include="Convey.CQRS.Queries" Version="0.5.518" />
+    <PackageReference Include="Convey.Persistence.MongoDB" Version="0.5.518" />
+    <PackageReference Include="Convey.Secrets.Vault" Version="0.5.518" />
+    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SalesManager.Availability.Application\SalesManager.Availability.Application.csproj" />
+    <ProjectReference Include="..\SalesManager.Availability.Core\SalesManager.Availability.Core.csproj" />
+  </ItemGroup>
+
 </Project>

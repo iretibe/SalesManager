@@ -1,8 +1,10 @@
-﻿namespace SalesManager.Availability.Core.Exceptions
+namespace SalesManager.Availability.Core.Exceptions
 {
     public class InvalidResourceTagsException : DomainException
     {
-        public InvalidResourceTagsException() : base($"Invalid tags for the resource.")
+        public override string Code { get; } = "invalid_resource_tags";
+        
+        public InvalidResourceTagsException() : base("Resource tags are invalid.")
         {
         }
     }
